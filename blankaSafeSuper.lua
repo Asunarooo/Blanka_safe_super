@@ -2,8 +2,6 @@ local blanka_safe_super_selector = -1
 
 blanka_safe_super_button = {
 		text = "Display Safe Super Zone",
-		x = 8,
-		y = determineButtonYPos(addonpage),
 		olcolour = "black",
 		func =	function()
 				blanka_safe_super_selector = blanka_safe_super_selector + 1
@@ -19,7 +17,7 @@ blanka_safe_super_button = {
 				end
 			end,
 	}
-table.insert(addonpage, blanka_safe_super_button)
+insertAddonButton(blanka_safe_super_button)
 
 local function drawSafeSuper()
 	if blanka_safe_super_selector > -1 then
